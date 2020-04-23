@@ -71,11 +71,14 @@ input[type=submit]:hover {
 		<br><br>
 		 <center>
 		<div class="fundo" >
-		<form action="adicionaContato"method="post"><p15>
+		<form action="adicionaCadastro"method="post"><p15>
 			<br><p14 style= "color: yellow; font-family: Courier New">NOME:</p14> <br><input type="text" name="nome"/><br />
 			<br><p14 style= "color: yellow; font-family: Courier New">LOGIN:</p14> <br><input type="text" name="login"/><br />
 			<br><p14 style= "color: yellow; font-family: Courier New">SENHA:</p14> <br><input type="password" name="senha"/><br />
 			<input type="submit" value="Entrar" style="font-family: Courier New"/>
+		</p15></form>
+		<form action="umbrella.html"method="post"><p15>
+			<input type="submit" value="Voltar" style="font-family: Courier New"/>
 		</p15></form>
 		</div>
           </center>

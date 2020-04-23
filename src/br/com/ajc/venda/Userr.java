@@ -10,6 +10,7 @@ import java.util.logging.Logger;
 public class Userr {
 
 	public String nome = "";
+	public String stats = "";
 	public boolean result = false;
 	public boolean verificarUsuario(String login, String senha) {
 
@@ -28,6 +29,7 @@ public class Userr {
 			if (rs.next()) {
 				result = true;
 				nome = rs.getString("nome");
+				stats = rs.getString("stats_gc");
 			}
 		} catch (SQLException ex) {
 			Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);

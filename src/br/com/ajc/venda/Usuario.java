@@ -6,6 +6,7 @@ public class Usuario {
     private String nome;
     private String login;
     private String senha;
+    private String stats_gc;
 	public int getId() {
 		return id;
 	}
@@ -30,8 +31,12 @@ public class Usuario {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-
-    
+	public String getStats_gc() {
+		return stats_gc;
+	}
+	public void setStats_gc(String stats_gc) {
+		this.stats_gc = stats_gc;
+	}
     
     
 }

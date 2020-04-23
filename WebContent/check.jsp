@@ -67,6 +67,44 @@ font-family: Courier New;
 font-size: 20px";
 }
 
+.button {
+  border-radius: 4px;
+  background-color: yellow;
+  border: none;
+  color: black;
+  text-align: center;
+  font-size: 15px;
+  padding: 20px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
 
 </style>
 
@@ -75,23 +113,32 @@ font-size: 20px";
 <br />
 <br />
 
-
+<script>
+function goBack() {
+  window.history.back()
+}
+</script>
 
 <%
+
 Userr us = new Userr();
+
 String login = request.getParameter("login");
 String senha = request.getParameter("senha");
 boolean status = us.verificarUsuario(login,senha);
-
 if(us.result==true) {
-	out.println("<div><p1>Login feito com sucesso " + us.nome + "</p1></div>");
-	
-}else {
-	out.println("<p1>Login ou senha invalidos!</p1>");
+	out.println("<p1><div>Login feito com sucesso " + us.nome + " e seu guarda-chuva está:" + us.stats + "</div></p1>");
+} else {
+	out.println("<p1><div>Login ou senha inválidos!</div></p1>");
+	 %>
+	<form action="acesso-contato.jsp"method="post">
+		<button class="button"><span>Voltar</span></button>
+	</form>
+	<%
 }
 %>
 
 
-</center>
+	</center>
 </body>
 </html>
