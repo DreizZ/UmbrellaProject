@@ -20,7 +20,7 @@ public class Userr {
 
 		try {
 
-			stmt = con.prepareStatement("SELECT nome FROM clientes WHERE login = ? and senha = ?");
+			stmt = con.prepareStatement("SELECT nome, stats_gc FROM clientes WHERE login = ? and senha = ?");
 			stmt.setString(1, login);
 			stmt.setString(2, senha);
 
