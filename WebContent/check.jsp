@@ -127,7 +127,7 @@ String login = request.getParameter("login");
 String senha = request.getParameter("senha");
 boolean status = us.verificarUsuario(login,senha);
 if(us.result==true) {
-	out.println("<p1><div>Login feito com sucesso " + us.nome + " e seu guarda-chuva está: " + us.stats + "</div></p1>");
+	out.println("<p1><div>Login feito com sucesso " + us.nome + "<br>Seu guarda-chuva está: " + us.stats + "</div></p1>");
 } else {
 	out.println("<p1><div>Login ou senha inválidos!</div></p1>");
 	 %>
